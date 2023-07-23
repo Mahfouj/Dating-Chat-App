@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profileEditFragment">
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="75dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dating5"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Mahfouz Howlader"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Mahfouj@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. "
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/saveBTn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:text="SaveBtn"
+            android:textSize="20dp"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1035192369077",
+    "project_id": "dating-chat-56b28",
+    "storage_bucket": "dating-chat-56b28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035192369077:android:9edacff88a5149e5e063fc",
+        "android_client_info": {
+          "package_name": "com.example.dating_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035192369077-hrj4254v8q571qse9tcqmdbrn0onmrdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAny0c0Dx1X3AjX72c7edsm7cNCMdSGUR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035192369077-hrj4254v8q571qse9tcqmdbrn0onmrdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
