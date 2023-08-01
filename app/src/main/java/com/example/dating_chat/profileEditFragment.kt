@@ -26,14 +26,13 @@ import com.google.firebase.storage.StorageReference
 
 class profileEditFragment : Fragment() {
 
-        lateinit var binding: FragmentProfileEditBinding
+    lateinit var binding: FragmentProfileEditBinding
 
     lateinit var userDb: DatabaseReference
 
-
     private var userId=""
 
-  lateinit var userStorage:StorageReference
+    lateinit var userStorage:StorageReference
 
     private var isProfileClicked = false
 
@@ -95,19 +94,12 @@ class profileEditFragment : Fragment() {
             }
         }
 
-
-
          binding.profileImage.setOnClickListener {
 
              isProfileClicked = true
 
              pickProfileImage()
          }
-
-
-
-
-
 
 
 
@@ -122,7 +114,7 @@ class profileEditFragment : Fragment() {
 
             userStorage.child("upload").child(userId).child("profile-image")
 
-               profileStorage.putFile(userprofileUri).addOnCompleteListener {
+        profileStorage.putFile(userprofileUri).addOnCompleteListener {
 
                    if (it.isSuccessful) {
 
@@ -140,12 +132,11 @@ class profileEditFragment : Fragment() {
 
     private fun profileUpdateWithImage(imageLink: String) {
 
-
-
         val userMap: MutableMap<String, Any> = mutableMapOf()
-
         userMap["fullName"] = binding.fullName.text.toString().trim()
+
         userMap["profileImage"] = imageLink
+
         userMap["bio"] = binding.bio.text.toString().trim()
 
         userDb.child(DBNODES.USER).child(userId).updateChildren(userMap)

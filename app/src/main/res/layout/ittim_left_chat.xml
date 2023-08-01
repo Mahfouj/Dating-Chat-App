@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/chatTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/left_bubble"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:text="jhfflf kllkfldhflka ;lfasdlhf;l dffffttretttylyyl;yky;l gflkgl;lfdg "
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textColor="#23A0E4"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

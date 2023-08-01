@@ -52,6 +52,12 @@
         <action
             android:id="@+id/action_homenFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homenFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+        <action
+            android:id="@+id/action_homenFragment_to_groupsFragment"
+            app:destination="@id/groupsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileEditFragment"
@@ -63,4 +69,14 @@
         android:name="com.example.dating_chat.chatProfileFragment"
         android:label="fragment_chat_profile"
         tools:layout="@layout/fragment_chat_profile" />
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.example.dating_chat.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group" />
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.example.dating_chat.groupsFragment"
+        android:label="fragment_groups"
+        tools:layout="@layout/fragment_groups" />
 </navigation>

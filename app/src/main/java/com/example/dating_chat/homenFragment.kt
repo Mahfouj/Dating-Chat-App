@@ -38,27 +38,37 @@ class homenFragment : Fragment(),UserAdapter.UserListener {
 
 
         userdb = FirebaseDatabase.getInstance().reference
-        binding.logOutBtn.setOnClickListener {
+
+
+
+        binding.topBar.profileImage.setOnClickListener {
+            currentUser?.let {
+                bundle.putString( profileFragment.USERID, it.userId)
+                findNavController().navigate(R.id.action_homenFragment_to_profileFragment, bundle)
+            }
+        }
+
+
+
+
+        binding.topBar.logOutBtn.setOnClickListener {
 
             val auth=FirebaseAuth.getInstance()
-
           auth.signOut().apply {
+
               findNavController().navigate(R.id.action_homenFragment_to_loginFragment)
           }
 
         }
 
-        binding.profileImage.setOnClickListener {
 
-            currentUser?.let {
+        binding.topBar.createGroupButton.setOnClickListener {
 
-                bundle.putString(profileFragment.USERID,it.userId)
-
-              findNavController().navigate(R.id.action_homenFragment_to_profileFragment,bundle)
-            }
-
-
+            findNavController().navigate(R.id.action_homenFragment_to_groupFragment)
         }
+
+
+
 
 
 
@@ -122,14 +132,11 @@ class homenFragment : Fragment(),UserAdapter.UserListener {
     private fun setProfile(imageLink:String) {
 
         currentUser?.let {
-            binding.profileImage.load(imageLink)
+            binding.topBar.profileImage.load(imageLink)
         }
     }
 
     override fun userItemClick(user: User) {
-
-
-
         bundle.putString(profileFragment.USERID,user.userId)
 
 
