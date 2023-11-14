@@ -111,7 +111,23 @@ class RazisterFragment : Fragment() {
     }
 
     private fun isPasswordValid(password: String): Boolean {
-        return password.length >=6
+        val passwordRegex =
+            "^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$".toRegex()
+
+        return if (password.matches(passwordRegex)) {
+            true
+        } else {
+            showPasswordValidationError()
+            false
+        }
+
+
     }
-}
+
+    private fun showPasswordValidationError() {
+        Toast.makeText(context,"Password must be at least 8 characters long and include " +
+                "at least one letter, one number, and one special character.",Toast.LENGTH_LONG).show()
+    }
+    }
+
 

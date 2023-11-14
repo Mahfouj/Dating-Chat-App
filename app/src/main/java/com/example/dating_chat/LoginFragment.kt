@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseUser
 
 
 class LoginFragment : Fragment() {
+
     lateinit var binding: FragmentLoginBinding
    lateinit var firebaseUser: FirebaseUser
 
